@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class EndpointConf {
   @Bean
   public ObjectMapper objectMapper() {
-    return new ObjectMapper();
+    return new ObjectMapper().con(FAIL_ON_UNKNOWN_PROPERTIES, false);
   }
 }
